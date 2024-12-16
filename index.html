@@ -11,40 +11,42 @@
       media='screen' 
       charset='utf-8'>
   </head>
-  <body>
-    <header class='aaa'>
-      <img src='./eisenhower-matrix.jpg' alt='photo'>
+  <body class="page">
+
+    <header class='page__header'>
+      <img class="header__img" src='./eisenhower-matrix.jpg' alt='photo'>
       <a 
-        class='more_inf' 
+        class='header___more-inf' 
         href='https://goal-life.com/page/method/matrix-eisenhower'>
         Want more details?
       </a>
     </header>
-    <main class='centered-main-page-element'>
-      <section id='topSectionForAddingElementToList'>
-        <label for='new-task'>Add Item</label>
-        <div class='task-row-wrapper'>
-          <input id='new-task' class='task' type='text'>
-          <button>Add</button>
+
+    <main class='page__main'>
+      <section class="main__new-task">
+        <label class="new-task__lable" for='new-task'>Add Item</label>
+        <div class='new-task__wrapper'>
+          <input class='new-task__input' id='new-task__input' type='text'>
+          <button class='new-task__btn'>Add</button>
         </div>
       </section>
 
-      <section>
-        <h3>Todo</h3>
-        <ul id='incompleteTasks'>
-          <li>
-            <input type='checkbox'>
-            <label class='task'>Pay Bills</label>
-            <input type='text' class='task'>
+      <section class="main__incomplet-tasks">
+        <h3 class="incomplet-tasks__title">Todo</h3>
+        <ul class="incomplet-tasks__list" id='incomplet-tasks__list'>
+          <li class="incomplet-tasks__item">
+            <input class="incomplet-task__checkbox" type='checkbox'>
+            <label class='incomplete-task__lable'>Pay Bills</label>
+            <input class='incomplete-task__input' type='text' >
             <button class='edit'>Edit</button>
             <button class='delete'>
               <img src='./remove.svg' alt='photo'>
             </button>
           </li>
-          <li class='editMode'>
-            <input type='checkbox'>
-            <label class='task'>Go Shopping</label>
-            <input type='text' value='Go Shopping' class='task'>
+          <li class="incomplet-tasks__item incomplete-tasks__item--edit-mode">
+            <input class="incomplete-task__checkbox" type='checkbox'>
+            <label class='incomplete-task__lable'>Go Shopping</label>
+            <input class='incomplete-task__input' type='text' value='Go Shopping' >
             <button class='edit'>Save</button>
             <button class='delete'>
               <img src='./remove.svg' alt='photo'>
