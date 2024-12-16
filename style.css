@@ -1,45 +1,50 @@
 /* Basic Style */
-body {
+.page {
     background-color: #f8f8f8;
     color: #333;
     font-family: 'lato', sans-serif;
   }
-  
-  .aaa {
+  /*header*/
+  .page__header {
     width: 500px;
     margin: 0 auto;
     display: block;
     text-align: right;
   }
   
-  .aaa img {
+  .page__header  
+  .header__img {
     width: 100%;
   }
   
-  .aaa,
-  .more_inf {
+  .page__header,
+  .header___more-inf {
     font-family: 'fantasy', cursive;
   }
   
   @media (max-width: 768px) {
-    .aaa {
+    .page__header {
       text-align: center;
     }
   }
-  
-  .centered-main-page-element {
+  /*main*/
+  .page__main {
     display: block;
     width: 500px;
     margin: 0 auto 0;
   }
   
-  .task {
+  .task,    /*temp*/
+  .new-task__input,
+  .incomplete-task__lable,
+  .incomplete-task__input
+   {
     width: 56%;
     display: inline-block;
     flex-grow: 1;
   }
   
-  .task-row-wrapper {
+  .new-task__wrapper {
     display: flex;
   }
   
@@ -53,7 +58,8 @@ body {
     list-style: none;
   }
   
-  input,
+  input,/*temp*/
+  .new-task__input,
   button {
     outline: none;
   }
@@ -107,12 +113,12 @@ body {
     margin: 0 0 20px;
   }
   
-  input#new-task {
+  #new-task__input {
     width: 318px;
   }
   
   /* Task list */
-  li {
+  .incomplet-tasks__item /*temp*/{
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
@@ -121,22 +127,22 @@ body {
     align-items: center;
   }
   
-  li > * {
+  .incomplet-tasks__item > * {
     vertical-align: middle;
   }
   
-  li > input[type='checkbox'] {
+  .incomplet-tasks__item > input[type='checkbox'] {
     margin: 0 10px;
   }
   
-  li > label {
+  .incomplet-tasks__item > label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
   }
   
-  li > input[type='text'] {
+  .incomplet-tasks__item > input[type='text'] {
     width: 226px;
   }
   
@@ -161,11 +167,11 @@ body {
     display: none;
   }
   
-  ul li.editMode input[type='text'] {
+  ul li.incomplete-tasks__item--edit-mode input[type='text'] {
     display: inline-block;
     width: 224px;
   }
   
-  ul li.editMode label {
+  ul li.incomplete-tasks__item--edit-mode label {
     display: none;
   }
