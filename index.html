@@ -2,69 +2,97 @@
 <html>
   <head>
     <title>Todo App</title>
-    <link 
-      href='https://fonts.googleapis.com/css?family=Lato:300,400,700' 
-      rel='stylesheet'>
-    <link 
-      rel='stylesheet' 
-      href='style.css' 
-      media='screen' 
-      charset='utf-8'>
+    <link
+      href='https://fonts.googleapis.com/css?family=Lato:300,400,700'
+      rel='stylesheet'
+    />
+    <link
+      rel='stylesheet'
+      href='style.css'
+      media='screen'
+      charset='utf-8'
+    />
   </head>
-  <body class="page">
-
+  <body class='page'>
     <header class='page__header'>
-      <img class="header__img" src='./eisenhower-matrix.jpg' alt='photo'>
-      <a 
-        class='header___more-inf' 
-        href='https://goal-life.com/page/method/matrix-eisenhower'>
+      <img
+        class='header__img'
+        src='./eisenhower-matrix.jpg'
+        alt='photo'
+      />
+      <a
+        class='header___more-inf'
+        href='https://goal-life.com/page/method/matrix-eisenhower'
+      >
         Want more details?
       </a>
     </header>
 
     <main class='page__main'>
-      <section class="main__new-task">
-        <label class="new-task__lable" for='new-task'>Add Item</label>
+      <section class='main__new-task'>
+        <label class='new-task__lable' for='new-task'>Add Item</label>
         <div class='new-task__wrapper'>
-          <input class='new-task__input' id='new-task__input' type='text'>
+          <input class='new-task__input' id='new-task__input' type='text' />
           <button class='new-task__btn'>Add</button>
         </div>
       </section>
 
-      <section class="main__incomplet-tasks">
-        <h3 class="incomplet-tasks__title">Todo</h3>
-        <ul class="incomplet-tasks__list" id='incomplet-tasks__list'>
-          <li class="incomplet-tasks__item ">
-            <input class="incomplet-task__checkbox" type='checkbox'>
+      <section class='main__incomplet-tasks'>
+        <h3 class='incomplet-tasks__title'>Todo</h3>
+        <ul class='incomplet-tasks__list' id='incomplet-tasks__list'>
+          <li class='incomplet-tasks__item'>
+            <input class='incomplet-task__checkbox' type='checkbox' />
             <label class='incomplete-task__lable'>Pay Bills</label>
-            <input class='incomplete-task__input' type='text' >
-            <button class="incomplete-task__button incomplete-task__button--edit">Edit</button>
-            <button class="incomplete-task__button incomplete-task__button--delete">
-              <img class="delete-icon" src='./remove.svg' alt='photo'>
+            <input class='incomplete-task__input' type='text' />
+            <button
+              class='incomplete-task__button incomplete-task__button--edit'
+            >
+              Edit
+            </button>
+            <button
+              class='incomplete-task__button incomplete-task__button--delete'
+            >
+              <img class='delete-icon' src='./remove.svg' alt='photo' />
             </button>
           </li>
-          <li class="incomplet-tasks__item incomplete-tasks__item--edit-mode">
-            <input class="incomplet-task__checkbox" type='checkbox'>
+          <li class='incomplet-tasks__item incomplete-tasks__item--edit-mode'>
+            <input class='incomplet-task__checkbox' type='checkbox' />
             <label class='incomplete-task__lable'>Go Shopping</label>
-            <input class='incomplete-task__input' type='text' value='Go Shopping' >
-            <button class="incomplete-task__button incomplete-task__button--edit">Save</button>
-            <button class="incomplete-task__button incomplete-task__button--delete">
-              <img class="delete-icon" src='./remove.svg' alt='photo'>
+            <input
+              class='incomplete-task__input'
+              type='text'
+              value='Go Shopping'
+            />
+            <button
+              class='incomplete-task__button incomplete-task__button--edit'
+            >
+              Save
+            </button>
+            <button
+              class='incomplete-task__button incomplete-task__button--delete'
+            >
+              <img class='delete-icon' src='./remove.svg' alt='photo' />
             </button>
           </li>
         </ul>
       </section>
 
-      <section class="main__completed">
-        <h3 class="completed__title">Completed</h3>
-        <ul class="completed__tasks"  id='completed__tasks'>
-          <li class="complete-task__item complete-tasks__item--edit-mode">
-            <input class="complete-checkbox" type='checkbox' checked>
+      <section class='main__completed'>
+        <h3 class='completed__title'>Completed</h3>
+        <ul class='completed__tasks' id='completed__tasks'>
+          <li class='complete-task__item complete-tasks__item--edit-mode'>
+            <input
+              class='complete-checkbox'
+              type='checkbox'
+              checked
+            />
             <label class='complete-task__lable'>See the Doctor</label>
-            <input class='complete-task__input' type='text'>
-            <button class='complete-task__button complete-task__button--edit'>Edit</button>
+            <input class='complete-task__input' type='text' />
+            <button class='complete-task__button complete-task__button--edit'>
+              Edit
+            </button>
             <button class='complete-task__button complete-task__button--delete'>
-              <img class="delete-icon" src='./remove.svg' alt='photo'>
+              <img class='delete-icon' src='./remove.svg' alt='photo' />
             </button>
           </li>
         </ul>
@@ -74,4 +102,3 @@
     <script type='text/javascript' src='app.js'></script>
   </body>
 </html>
-
