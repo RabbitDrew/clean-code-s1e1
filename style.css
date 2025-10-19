@@ -170,6 +170,6 @@ ul li.editMode label {
 }
 /*! */
 #topSectionForAddingElementToList {
-  display: block; /* уже по умолчанию, но для ясности */
-  margin: 16px 0; /* как раньше у p */
+  display: block;
+  margin: 16px 0; 
 }
