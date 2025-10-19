@@ -151,7 +151,7 @@ button.delete img:hover {
 
 /* Completed */
 ul#completed-tasks label {
-  text-decoration: line-through;
+  text-decoration: line-through
   color: #888;
 }
 
@@ -167,4 +167,9 @@ ul li.editMode input[type=text] {
 
 ul li.editMode label {
   display: inline-block;
+}
+/*! */
+#topSectionForAddingElementToList {
+  display: block; /* уже по умолчанию, но для ясности */
+  margin: 16px 0; /* как раньше у p */
 }
