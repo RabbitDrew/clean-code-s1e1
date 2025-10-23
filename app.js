@@ -15,47 +15,48 @@ var completedTasksHolder=document.getElementById("completed-tasks");//completed-
 
 
 //New task list item
-var createNewTaskElement=function(taskString){
+var createNewTaskElement = function(taskString) {
+    var listItem = document.createElement("li");
+    listItem.className = "task-item"; // li класс BEM
 
-    var listItem=document.createElement("li");
+    // checkbox
+    var checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    checkBox.className = "task-input__checkbox"; // BEM
 
-    //input (checkbox)
-    var checkBox=document.createElement("input");//checkbx
-    //label
-    var label=document.createElement("label");//label
-    //input (text)
-    var editInput=document.createElement("input");//text
-    //button.edit
-    var editButton=document.createElement("button");//edit button
+    // label
+    var label = document.createElement("label");
+    label.innerText = taskString;
+    label.className = "task-input__title task"; // BEM + общий класс task
 
-    //button.delete
-    var deleteButton=document.createElement("button");//delete button
-    var deleteButtonImg=document.createElement("img");//delete button image
+    // text input (для редактирования)
+    var editInput = document.createElement("input");
+    editInput.type = "text";
+    editInput.value = taskString;
+    editInput.className = "task-input__edit task"; // BEM + общий класс task
 
-    label.innerText=taskString;
-    label.className='task';
+    // edit button
+    var editButton = document.createElement("button");
+    editButton.innerText = "Edit";
+    editButton.className = "task-btn__edit edit"; // BEM + общий класс edit
 
-    //Each elements, needs appending
-    checkBox.type="checkbox";
-    editInput.type="text";
-    editInput.className="task";
-
-    editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
-
-    deleteButton.className="delete";
-    deleteButtonImg.src='./remove.svg';
+    // delete button
+    var deleteButton = document.createElement("button");
+    deleteButton.className = "task-btn__delete delete"; // BEM + общий класс delete
+    var deleteButtonImg = document.createElement("img");
+    deleteButtonImg.src = "./remove.svg";
+    deleteButtonImg.className = "delete-img"; // BEM для картинки
     deleteButton.appendChild(deleteButtonImg);
 
-
-    //and appending.
+    // append all elements to li
     listItem.appendChild(checkBox);
     listItem.appendChild(label);
     listItem.appendChild(editInput);
     listItem.appendChild(editButton);
     listItem.appendChild(deleteButton);
+
     return listItem;
-}
+};
 
 
 
@@ -155,9 +156,9 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.edit");
-    var deleteButton=taskListItem.querySelector("button.delete");
+    var checkBox = taskListItem.querySelector(".task-input__checkbox");
+    var editButton = taskListItem.querySelector(".task-btn__edit");
+    var deleteButton = taskListItem.querySelector(".task-btn__delete");
 
 
     //Bind editTask to edit button.
